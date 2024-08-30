@@ -281,6 +281,13 @@ Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e
 Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function selectContainer() {
+  const container = document.getElementById("container");
+  return container;
+}
+const containerElement = selectContainer();
+console.log(containerElement);
+
 /* ESERCIZIO 21
 Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
@@ -292,6 +299,15 @@ Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto 
 /* ESERCIZIO 23
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+
+function addRedBackgroundToLinksonthePage() {
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.style.backgroundColor = "red";
+  });
+}
+
+addRedBackgroundToLinksonthePage();
 
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
